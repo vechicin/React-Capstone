@@ -4,7 +4,7 @@ import { fetchStatements } from '../../redux/details/details';
 
 const Detailsfive = () => {
   const statements = useSelector((state) => state.details.statements);
-  const info = statements[Object.keys(statements)[3]];
+  const info = statements[Object.keys(statements)[4]];
   const dispatch = useDispatch();
 
   useEffect(() => {
