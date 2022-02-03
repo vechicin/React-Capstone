@@ -7,9 +7,9 @@ const Details = (props) => {
   } = props;
 
   return (
-    <div>
-      <p>{year}</p>
-    </div>
+    <ul>
+      <li>{year}</li>
+    </ul>
   );
 };
 

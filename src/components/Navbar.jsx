@@ -8,21 +8,20 @@ const Navbar = () => {
       path: '/',
       text: 'Home',
     },
-    {
-      id: 2,
-      path: 'details',
-      text: 'Details',
-    },
   ];
 
   return (
     <nav>
-      <ul>
+      <ul className="navbar-ul">
         {links.map((link) => (
-          <li key={link.id}>
-            <NavLink to={link.path}>
+          <li className="d-flex" key={link.id}>
+            <NavLink className="btn btn-light" to={link.path}>
               {link.text}
             </NavLink>
+            <img src="apple.svg" alt="apple logo" />
+            <h1>Financial Statements</h1>
+            <img src="mic-fill.svg" alt="microphone" />
+            <img src="gear-fill.svg" alt="gear" />
           </li>
         ))}
       </ul>
