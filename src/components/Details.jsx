@@ -7,9 +7,7 @@ const Details = (props) => {
   } = props;
 
   return (
-    <ul>
-      <li>{year}</li>
-    </ul>
+    <li className="list-group-item">{year}</li>
   );
 };
 

@@ -15,9 +15,7 @@ const Navbar = () => {
       <ul className="navbar-ul">
         {links.map((link) => (
           <li className="d-flex" key={link.id}>
-            <NavLink className="btn btn-light" to={link.path}>
-              {link.text}
-            </NavLink>
+            <NavLink className="btn btn-light" to={link.path} />
             <img src="apple.svg" alt="apple logo" />
             <h1>Financial Statements</h1>
             <img src="mic-fill.svg" alt="microphone" />

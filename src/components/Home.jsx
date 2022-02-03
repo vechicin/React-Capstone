@@ -15,13 +15,13 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <ul className="list-group">
       {data.map((item) => (
         <NavLink key={item.year} to={`/details/${item.date}`}>
           <Details year={item.year} />
         </NavLink>
       ))}
-    </div>
+    </ul>
   );
 };
 
