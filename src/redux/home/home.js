@@ -7,30 +7,40 @@ const initalState = {
   data: [],
 };
 
-export const fetchData = () => async (dispatch) => {
-  const response = (await axios.get(URL)).data;
-  const statements = [];
-  response.forEach((item) => {
-    const fetchedStatements = {
-      year: item.calendarYear,
-      date: item.date,
-      currency: item.reportedCurrency,
-      costExpenses: item.costAndExpenses,
-      ebitda: item.ebitda,
-      link: item.finalLink,
-      profit: item.grossProfit,
-      incomeTax: item.incomeTaxExpense,
-      netIncome: item.netIncome,
-      revenue: item.revenue,
-      shares: item.weightedAverageShsOut,
-    };
-    statements.push(fetchedStatements);
-    return statements;
-  });
+export const fetchData = () => (dispatch) => {
+  axios.get(URL).then((response) => {
+    const statements = (response.data).map((key) => {
+      const year = key.calendarYear;
+      const expenses = key.costAndExpenses;
+      const {
+        date, ebitda, incomeBeforeTax, revenue,
+      } = key;
+      const link = key.finalLink;
+      const profit = key.grossProfit;
+      const income = key.netIncome;
+      const currency = key.reportedCurrency;
+      const shares = key.weightedAverageShsOut;
 
-  dispatch({
-    type: FETCH_DATA,
-    payload: statements,
+      const statement = {
+        year,
+        expenses,
+        date,
+        ebitda,
+        link,
+        profit,
+        incomeBeforeTax,
+        income,
+        currency,
+        revenue,
+        shares,
+      };
+      return statement;
+    });
+
+    dispatch({
+      type: FETCH_DATA,
+      payload: statements,
+    });
   });
 };
 

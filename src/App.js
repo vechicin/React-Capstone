@@ -11,7 +11,9 @@ const App = () => (
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="details/2021-09-25" element={<Statements />} />
+        <Route path="/details" element={<Statements />}>
+          <Route path=":statementYear" element={<Statements />} />
+        </Route>
       </Routes>
     </div>
   </BrowserRouter>
