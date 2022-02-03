@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const FETCH_HOME_DATA = 'React-Capstone/src/redux/home/FETCH_HOME_DATA';
+const FETCH_DATA = 'React-Capstone/src/redux/home/FETCH_DATA';
 const API_KEY = '77df038e719b3f3653b2467abd2e7baf';
 const URL = `https://financialmodelingprep.com/api/v3/income-statement/AAPL?limit=120&apikey=${API_KEY}`;
 const initalState = {
@@ -9,26 +9,34 @@ const initalState = {
 
 export const fetchData = () => async (dispatch) => {
   const response = (await axios.get(URL)).data;
-
-  const info = [];
-  Object.entries(response).map((item) => {
-    const fetchedInfo = {
-      year: item[1].calendarYear,
-      id: item[1].date,
+  const statements = [];
+  response.forEach((item) => {
+    const fetchedStatements = {
+      year: item.calendarYear,
+      date: item.date,
+      currency: item.reportedCurrency,
+      costExpenses: item.costAndExpenses,
+      ebitda: item.ebitda,
+      link: item.finalLink,
+      profit: item.grossProfit,
+      incomeTax: item.incomeTaxExpense,
+      netIncome: item.netIncome,
+      revenue: item.revenue,
+      shares: item.weightedAverageShsOut,
     };
-    info.push(fetchedInfo);
-    return info;
+    statements.push(fetchedStatements);
+    return statements;
   });
 
   dispatch({
-    type: FETCH_HOME_DATA,
-    payload: info,
+    type: FETCH_DATA,
+    payload: statements,
   });
 };
 
 const home = (state = initalState, action) => {
   switch (action.type) {
-    case FETCH_HOME_DATA:
+    case FETCH_DATA:
       return {
         ...state,
         data: action.payload,

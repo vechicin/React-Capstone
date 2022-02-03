@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { fetchData } from '../redux/home/home';
+import Details from './Details';
 
 const Home = () => {
   const data = useSelector((state) => state.home.data);
@@ -15,16 +16,11 @@ const Home = () => {
 
   return (
     <div>
-      <p>This is the home page!</p>
-      <ul>
-        {data.map((item) => (
-          <li key={item.id}>
-            <NavLink to={`details/${item.id}`}>
-              {item.year}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
+      {data.map((item) => (
+        <NavLink key={item.year} to={`/details/${item.date}`}>
+          <Details year={item.year} />
+        </NavLink>
+      ))}
     </div>
   );
 };
