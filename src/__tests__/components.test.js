@@ -1,12 +1,9 @@
 import { render } from "@testing-library/react"
 import { Provider } from "react-redux"
-import { Router } from "react-router"
-import { PersistGate } from "redux-persist/integration/react"
 import Details from "../components/Details"
 import Home from "../components/Home"
-import Navbar from "../components/Navbar"
 import Statements from "../components/Statements"
-import store, { persistor } from "../redux/configureStore"
+import store from "../redux/configureStore"
 
 describe('Components testing', () => {
   test('Home component', () => {
