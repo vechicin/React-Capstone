@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const FETCH_DATA = 'React-Capstone/src/redux/home/FETCH_DATA';
-const API_KEY = '77df038e719b3f3653b2467abd2e7baf';
+export const FETCH_DATA = 'React-Capstone/src/redux/home/FETCH_DATA';
+const API_KEY = '2a09e3ba2d6d10784b25d56655b5b5ae';
 const URL = `https://financialmodelingprep.com/api/v3/income-statement/AAPL?limit=120&apikey=${API_KEY}`;
 const initalState = {
   data: [],
