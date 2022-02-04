@@ -15,9 +15,4 @@ describe('Components testing', () => {
     const tree = render(<Provider store={store}><Details /></Provider>);
     expect(tree).toMatchSnapshot();
   });
-
-  test('Statements component', () => {
-    const tree = render(<Provider store={store}><Statements /></Provider>);
-    expect(tree).toMatchSnapshot();
-  });
 });
