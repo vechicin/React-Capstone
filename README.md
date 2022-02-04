@@ -89,7 +89,7 @@ Give a ⭐️ if you like this project!
 
 - Microverse
 - Nelson Sakwa for the inspiration for the design
-- Data provided by Financial Modeling Prep
+- Data provided by [Financial Modeling Prep](https://site.financialmodelingprep.com/developer/docs)
 
 ## 📝 License
 
