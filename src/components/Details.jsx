@@ -4,15 +4,20 @@ import PropTypes from 'prop-types';
 const Details = (props) => {
   const {
     year,
+    date,
   } = props;
 
   return (
-    <li className="list-group-item">{year}</li>
+    <ul>
+      <li className="list-group-item">{year}</li>
+      <li className="list-group-item">{date}</li>
+    </ul>
   );
 };
 
 Details.propTypes = {
   year: PropTypes.string,
+  date: PropTypes.string.isRequired,
 };
 
 Details.defaultProps = {

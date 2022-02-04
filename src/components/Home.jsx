@@ -10,7 +10,7 @@ const Home = () => {
     <ul className="list-group">
       {data.map((item) => (
         <NavLink key={item.year} to={`/details/${item.date}`}>
-          <Details year={item.year} />
+          <Details year={item.year} date={item.date} />
         </NavLink>
       ))}
     </ul>

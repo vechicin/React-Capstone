@@ -55,7 +55,7 @@ img {
   filter: invert(83%) sepia(12%) saturate(14%) hue-rotate(10deg) brightness(92%) contrast(88%);
 }
 
-.container {
+.page {
   margin: 0;
   padding: 0;
 }
@@ -69,6 +69,7 @@ img {
   height: 100vh;
   justify-content: space-evenly;
   background-color: #c0c0c0;
+  padding-right: 0;
 }
 
 .table {
@@ -83,4 +84,48 @@ table {
 
 .table-secondary {
   --bs-table-bg: #c0c0c0;
+}
+
+main {
+  margin-top: 50px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.home-items {
+  margin-top: 15px;
+  display: grid;
+  text-align: center;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.home-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.home-row-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.home-row li:nth-child(1n) {
+  background-color: #c0c0c0;
+}
+
+.home-row-two li:nth-child(1n) {
+  background-color: #919090;
+}
+
+ul {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.first-color {
+  background-color: #c0c0c0;
 }
