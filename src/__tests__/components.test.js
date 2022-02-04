@@ -2,7 +2,6 @@ import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import Details from '../components/Details';
 import Home from '../components/Home';
-import Statements from '../components/Statements';
 import store from '../redux/configureStore';
 
 describe('Components testing', () => {
