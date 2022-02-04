@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+nav {
+  width: 100%;
+  background-color: #1f2020;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+}
+
+.navbar-ul {
+  padding: 5px;
+  margin-bottom: 0;
+}
+
+.active {
+  font-weight: bolder;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  height: 20px;
+  background-image: url(../public/arrow-left-circle.svg);
+  background-repeat: no-repeat;
+  width: 15%;
+  background-position: center;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  font-size: 17px;
+  color: #fff;
+}
+
+.d-flex {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+img {
+  padding-bottom: 10px;
+  filter: invert(83%) sepia(12%) saturate(14%) hue-rotate(10deg) brightness(92%) contrast(88%);
+}
+
+.page {
+  margin: 0;
+  padding: 0;
+}
+
+.btn-light.active {
+  background-color: #c0c0c0;
+}
+
+.list-group {
+  align-items: center;
+  height: 100vh;
+  justify-content: space-evenly;
+  background-color: #c0c0c0;
+  padding-right: 0;
+  flex-wrap: wrap;
+  flex-direction: row;
+  text-align: center;
+}
+
+.table {
+  margin-top: 39px;
+  height: 100vh;
+  width: 100vw;
+}
+
+table {
+  text-align: center;
+}
+
+.table-secondary {
+  --bs-table-bg: #c0c0c0;
+}
+
+main {
+  margin-top: 50px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.home-items {
+  margin-top: 15px;
+  display: grid;
+  text-align: center;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+ul {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+#FY2021 {
+  width: 75vw;
+}
+
+#FY2020 {
+  width: 40vw;
+  background-color: #1f2020;
+}
+
+#FY2019 {
+  width: 40vw;
+  background-color: #696969;
+}
+
+#FY2018 {
+  width: 40vw;
+  background-color: #696969;
+}
+
+#FY2017 {
+  width: 40vw;
+  background-color: #1f2020;
+}
+
+.home-ul {
+  padding: 0;
+}
+
+.details-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  font-weight: bold;
+}
