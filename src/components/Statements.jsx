@@ -17,18 +17,10 @@ const Statements = () => {
         <div className="col-auto">
           <table className="table table-secondary table-striped table-bordered">
             <thead>
-              {/* <tr>
-                <th scope="col">Item</th>
-                <th scope="col">{statement.year}</th>
-              </tr> */}
               <tr>
                 <th scope="row">Currency</th>
                 <td>{statement.currency}</td>
               </tr>
-              {/* <tr>
-                <th scope="row">Date</th>
-                <td>{statement.date}</td>
-              </tr> */}
               <tr>
                 <th scope="row">EBITDA</th>
                 <td>{statement.ebitda}</td>
