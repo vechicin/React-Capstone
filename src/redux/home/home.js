@@ -13,7 +13,7 @@ export const fetchData = () => (dispatch) => {
       const year = key.calendarYear;
       const expenses = key.costAndExpenses;
       const {
-        date, ebitda, incomeBeforeTax, revenue,
+        date, ebitda, incomeBeforeTax, revenue, period,
       } = key;
       const link = key.finalLink;
       const profit = key.grossProfit;
@@ -33,6 +33,7 @@ export const fetchData = () => (dispatch) => {
         currency,
         revenue,
         shares,
+        period,
       };
       return statement;
     });

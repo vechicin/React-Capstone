@@ -9,22 +9,26 @@ const Statements = () => {
 
   return (
     <div className="row justify-content-center">
-      <div className="col-auto">
-        <table className="table table-secondary table-striped table-bordered">
-          {statement && (
+      <div className="details-title">
+        <p>{statement.year}</p>
+        <p>{statement.date}</p>
+      </div>
+      {statement && (
+        <div className="col-auto">
+          <table className="table table-secondary table-striped table-bordered">
             <thead>
-              <tr>
+              {/* <tr>
                 <th scope="col">Item</th>
                 <th scope="col">{statement.year}</th>
-              </tr>
+              </tr> */}
               <tr>
                 <th scope="row">Currency</th>
                 <td>{statement.currency}</td>
               </tr>
-              <tr>
+              {/* <tr>
                 <th scope="row">Date</th>
                 <td>{statement.date}</td>
-              </tr>
+              </tr> */}
               <tr>
                 <th scope="row">EBITDA</th>
                 <td>{statement.ebitda}</td>
@@ -60,9 +64,9 @@ const Statements = () => {
                 <td>{statement.shares}</td>
               </tr>
             </thead>
-          )}
-        </table>
-      </div>
+          </table>
+        </div>
+      )}
     </div>
   );
 };

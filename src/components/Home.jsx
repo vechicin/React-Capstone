@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <ul className="list-group">
       {data.map((item) => (
-        <NavLink key={item.year} to={`/details/${item.date}`}>
+        <NavLink className="list-group-item" id={item.period + item.year} key={item.year} to={`/details/${item.date}`}>
           <Details year={item.year} date={item.date} />
         </NavLink>
       ))}
