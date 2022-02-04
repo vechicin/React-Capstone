@@ -10,10 +10,10 @@ describe('Reducer: ', () => {
   test('Fetching data', () => {
     const action = {
       type: FETCH_DATA,
-      payload: [{name: 'mock'}],
+      payload: [{ name: 'mock' }],
     };
-    expect(home({data: []}, action)).toEqual({
-      data: [{name: 'mock'}],
+    expect(home({ data: [] }, action)).toEqual({
+      data: [{ name: 'mock' }],
     });
   });
 });
