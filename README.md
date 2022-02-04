@@ -19,6 +19,9 @@ To run the project locally make sure you run this command on your terminal
 
 `https://github.com/vechicin/React-Capstone.git`
 
+## Live Demo 🔍
+To check this app's live demo click [here](https://apple-financial-statements.herokuapp.com/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
